@@ -6,12 +6,14 @@ export default class loginPage {
     password: Locator;
     loginButton: Locator;
     errorMessage: Locator;
+    fieldErrorMessage: Locator;
     constructor(page: Page) {
         this.page = page;
         this.username = page.locator("[name='username']");
         this.password = page.locator("[name='password']");
         this.loginButton = page.locator("//button[@type='submit']");
         this.errorMessage = page.locator(".oxd-alert-content-text")
+        this.fieldErrorMessage = page.locator("[class*='error-message']")
 }
 
     async login(username: string, password: string) {
