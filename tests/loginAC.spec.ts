@@ -1,6 +1,5 @@
 import { expect, Page } from '@playwright/test';
 import { test } from '../fixture/site';
-import { beforeEach } from 'node:test';
 import {getEnv} from '../helper/env';
 import dotenv from 'dotenv';
 dotenv.config();
